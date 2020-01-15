@@ -8,6 +8,25 @@ const setupInput = function(conn) {
   stdin.setEncoding('utf8');
   stdin.resume();
   const handleUserInput = function(key) {
+
+    const msgs = ['GG', 'GG NO RE', 'EZ CLAP', 'GIT GUD'];
+
+    if (key === '1') {
+      connection.write(`Say: ${msgs[0]}`)
+    }
+
+    if (key === '2') {
+      connection.write(`Say: ${msgs[1]}`)
+    }
+
+    if (key === '3') {
+      connection.write(`Say: ${msgs[2]}`)
+    }
+
+    if (key === '4') {
+      connection.write(`Say: ${msgs[3]}`)
+    }
+    
     if (key === '\u0003') {
       process.exit();
     }
